@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="loading_view_tree" model="ir.ui.view">
+        <field name="name">daily.loading.tree</field>
+        <field name="model">loading.get.data</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Loading Name"/>
+                <field name="age"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="loading_view_form" model="ir.ui.view">
+        <field name="name">daily.loading.form</field>
+        <field name="model">loading.get.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="loading_view_search" model="ir.ui.view">
+        <field name="name">daily.loading.search</field>
+        <field name="model">loading.get.data</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Loading Name"/>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="action_loading_list" model="ir.actions.act_window">
+        <field name="name">Loading List</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">loading.get.data</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new loading sheet
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="loading_list_menu"
+              name="Daily Loading"
+              parent="loading_details_master"
+              action="action_loading_list"
+              sequence="0"/>
+
+</odoo>

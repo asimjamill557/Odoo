@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+Daily_Loading_Management.access_loading_get_data,access_loading_get_data,Daily_Loading_Management.model_loading_get_data,base.group_user,1,1,1,1

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="loading_sheet_menu"
+              name="Loading Sheet Management"
+              web_icon="Daily_Loading_Management,static/description/icon.png"
+              sequence="0"/>
+
+    <menuitem id="loading_details_master"
+              name="New Loading"
+              parent="loading_sheet_menu"
+              sequence="0"/>
+
+</odoo>
